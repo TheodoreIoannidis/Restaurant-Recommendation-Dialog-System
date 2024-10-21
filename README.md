@@ -6,6 +6,11 @@ The user can specify the food type, pricerange and area of the restaurant he is 
 The system then filters all Cambridge restaurants, finds the ones which satisfy the user's requirements and gives a recommendation if there are any. The user can then ask for the recommended restaurant's adress, phone number or postal code.
 
 The system has some configurability: 
-  a) Text to speech
-  b) Capitalized output (turn on/off caps)
+  a) Text to speech.
+  
+  b) Capitalized output (turn on/off caps).
+  
   c) Restarting (enable/disable restart).
+
+Because the system was used in an experiment, after each session, the user is required to answer to some questions regarding the use of the system with and without text to speech. 
+The dialog and answers to the questionnaire are saved in a text file.
