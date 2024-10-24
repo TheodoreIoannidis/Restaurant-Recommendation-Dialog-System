@@ -1,0 +1,18 @@
+
+system: Hello , welcome to the Cambridge restaurant system? You can ask for restaurants by area , price range or food type . How may I help you?
+ user: hello
+system: What kind of food would you like?
+ user: any
+system: What is the price range?
+ user: expensive
+system: What part of town do you have in mind?
+ user: any
+system: Do you have additional requirements?
+ user: no
+system: Yu garden is a nice restaurant in the east of town serving chinese food and the prices are expensive. 
+ user: more
+system: Other options are:
+
+system: sitar tandoori is in the east part of town, it serves steakhouse food and the prices are expensive.
+system: saigon city is in the north part of town, it serves asian oriental food and the prices are expensive.
+system: restaurant two two is in the north part of town, it serves french food and the prices are expensive.

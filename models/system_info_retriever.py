@@ -1,11 +1,11 @@
 from models.preprocessor import Preprocessor
 from Levenshtein import distance
+
 class SystemInfoRetriever:
-    def __init__(self, info_dict, restaurant_info_df, caps= False):
+    def __init__(self, info_dict, restaurant_info_df):
         self.preprocessor = Preprocessor()
         self.restaurant_info_df = restaurant_info_df.copy()
         self.info_dict = info_dict
-        self.caps = caps
 
     def _get_column_by_word(self, word, dataframe):
         for column in ["pricerange", "area", "food"]:
@@ -13,7 +13,7 @@ class SystemInfoRetriever:
                 try:
                     stemmed_item = self.preprocessor.stem_word(item)
                     # compare stem Levenstein distance
-                    if distance(word, stemmed_item) <=1 :
+                    if distance(word, stemmed_item) <= 1:
                         return column, item
                 except:
                     pass
@@ -31,12 +31,11 @@ class SystemInfoRetriever:
                 column, word = info
                 if self.info_dict[column] is None:
                     self.info_dict[column] = word
-                    print(f"{column} = {word}" if not self.caps else f"{column} = {word}".upper())
+                    print(f"{column} = {word}")
             
-
         if "any" in user_input:
             for column, value in self.info_dict.items():
                 if self.info_dict[column] is None:
                     self.info_dict[column] = "dontcare"
-                    print(f"{column} = dontcare" if not self.caps else f"{column} = dontcare".upper())
+                    print(f"{column} = dontcare")
                     break
